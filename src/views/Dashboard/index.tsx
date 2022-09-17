@@ -1,10 +1,14 @@
 import React from "react";
+import * as S from './styles'
+
+//import components
+import Layout from "../../components/Layout";
 
 const Dashboard: React.FC = () => {
     return(
-        <>
-            <h1>Tela de Dashboard</h1>
-        </>
+        <S.Container>
+            <Layout/>
+        </S.Container>
     );
 }
 
