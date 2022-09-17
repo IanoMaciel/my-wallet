@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-//views
-import Dashboard from './views/Dashboard';
-import List from './views/List';
+import App from './App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,8 +8,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <>
-      <Dashboard />
-      <List/>
+      <App />
     </>
     
   </React.StrictMode>
