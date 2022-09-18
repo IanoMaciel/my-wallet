@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
     grid-area: MH;
 
-    background-color: #313862;
-    color: #FFFFFF;
+    background-color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.with};
 
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid ${props => props.theme.colors.gray};
 `
