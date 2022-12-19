@@ -1,5 +1,7 @@
 import React from "react";
+import Content from "../../components/Content";
 import ContentHeader from "../../components/ContentHeader";
+import HistoryFinanceCard from "../../components/HistoryFinanceCard";
 import SelectInput from "../../components/SelectInput";
 import * as S from './styles'
 
@@ -16,6 +18,93 @@ const List: React.FC = () => {
             <ContentHeader title="Saídas" lineColor="#E44C4E">
                 <SelectInput options={months}/>
             </ContentHeader>
+
+            <S.Content>
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                /><HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                <HistoryFinanceCard
+                    cardColor="#313862"
+                    tagColor="#E44C4E"
+                    title="Conta de luz"
+                    subTitle="19/12/2021"
+                    amount="R$ 600"
+                />
+                
+            </S.Content>
         </S.Container>
     );
 }
