@@ -8,16 +8,27 @@ import * as S from './styles'
 const List: React.FC = () => {
     
     const months = [
-        {value: '1', label: 'Janeiro'},
-        {value: '2', label: 'Fevereiro'},
-        {value: '3', label: 'Março'},
+        {value: 12, label: 'Dezembro'},
+        {value: 1, label: 'Janeiro'},
+        {value: 2, label: 'Fevereiro'},
     ]
     
+    const years = [
+        {value: 1, label: 2022},
+        {value: 2, label: 2023},
+    ]
+
     return(
         <S.Container>
             <ContentHeader title="Saídas" lineColor="#E44C4E">
                 <SelectInput options={months}/>
+                <SelectInput options={years}/>
             </ContentHeader>
+
+            <S.Filters>
+                <button type="button" className="tag-filter tag-filter-recurrent">Recorrentes</button>
+                <button type="button" className="tag-filter tag-filter-eventual">Eventuais</button>
+            </S.Filters>
 
             <S.Content>
                 <HistoryFinanceCard
