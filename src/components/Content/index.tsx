@@ -1,12 +1,14 @@
 import React from "react";
 import * as S from './styles'
 
-const Content: React.FC = () => {
-    return(
-        <S.Container>
-            <h1>Content</h1>
-        </S.Container>
-    );
+interface Props {
+    children: React.ReactNode;
 }
+
+const Content: React.FC<Props> = ({ children }) => (
+    <S.Container>
+        { children }
+    </S.Container>
+);
 
 export default Content;

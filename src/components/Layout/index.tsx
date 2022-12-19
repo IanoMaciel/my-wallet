@@ -5,14 +5,18 @@ import ManHeader from "../ManHeader";
 import Aside from "../Aside";
 import Content from "../Content";
 
-const Layout: React.FC = () => {
-    return(
+interface Props {
+    children: React.ReactNode;
+}
+
+const Layout: React.FC<Props> = ({ children }) => (
         <S.Container>
             <ManHeader/>
             <Aside/>
-            <Content/>
+            <Content>
+                { children }                
+            </Content>
         </S.Container>
-    );
-}
+);
 
 export default Layout;

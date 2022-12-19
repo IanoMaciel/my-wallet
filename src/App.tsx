@@ -7,12 +7,17 @@ import Light from "./styles/themes/Light"; // tema light
 
 //views
 import Dashboard from "./views/Dashboard";
+import List from "./views/List";
+import Layout from "./components/Layout";
+
 
 const App: React.FC = () => {
     return(
         <ThemeProvider theme={Dark}>
             <GlobalStyles/>
-            <Dashboard/>
+            <Layout>
+                <Dashboard/>
+            </Layout>
         </ThemeProvider>
     );
 }
