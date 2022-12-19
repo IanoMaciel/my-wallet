@@ -1,16 +1,19 @@
 import React, { Children } from "react";
+import ContentHeader from "../../components/ContentHeader";
+import SelectInput from "../../components/SelectInput";
 import * as S from './styles'
 
-//import components
-import Layout from "../../components/Layout";
-import List from "../List";
-
 const Dashboard: React.FC = () => {
+    const months = [
+        {value: '1', label: 'Janeiro'},
+        {value: '2', label: 'Fevereiro'},
+        {value: '3', label: 'Março'},
+    ]
     return(
         <S.Container>
-            <h1>
-                Dashboard
-            </h1>
+            <ContentHeader title="Dashboard" lineColor="#F7931B">
+                <SelectInput options={months}/>
+            </ContentHeader>
         </S.Container>
     );
 }

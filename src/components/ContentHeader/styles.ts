@@ -1,8 +1,33 @@
 import styled from 'styled-components';
 
+
+interface TitleContainerProps {
+    lineColor: string;
+}
+
 export const Container = styled.div`
-    grid-area: CT;
+    width: 100%;
     
-    background-color: ${props => props.theme.colors.primary};
-    color: ${props => props.theme.colors.with};
-`
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+`;
+
+export const TitleContainer = styled.div<TitleContainerProps>`
+    >h2 {
+        color: ${props => props.theme.colors.with};
+        
+        &::after{
+            content: '';
+            display: block;
+            width: 60px;
+            border-bottom: 10px solid ${props => props.lineColor};
+        }
+    }
+`;
+
+export const Controllers = styled.div`
+    display: flex;
+    
+`;
