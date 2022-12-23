@@ -6,8 +6,7 @@ import Dark from "./styles/themes/Dark"; // tema dark
 import Light from "./styles/themes/Light"; // tema light
 
 //views
-import Dashboard from "./views/Dashboard";
-import List from "./views/List";
+import Routes from "./routes";
 import Layout from "./components/Layout";
 
 
@@ -15,9 +14,7 @@ const App: React.FC = () => {
     return(
         <ThemeProvider theme={Dark}>
             <GlobalStyles/>
-            <Layout>
-                <List/>
-            </Layout>
+            <Routes/>
         </ThemeProvider>
     );
 }

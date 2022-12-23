@@ -1,12 +1,31 @@
-import React from "react";
-import Content from "../../components/Content";
+import React, {useMemo} from "react";
 import ContentHeader from "../../components/ContentHeader";
 import HistoryFinanceCard from "../../components/HistoryFinanceCard";
 import SelectInput from "../../components/SelectInput";
-import * as S from './styles'
+import * as S from './styles';
 
-const List: React.FC = () => {
+
+interface IRoutesProps {
+    match: {
+        params: {
+            type: string;
+        }
+    }
+}
+
+const List: React.FC<IRoutesProps> = ({match}) => {
     
+    const {type} = match.params; 
+
+    const title = useMemo(() => {
+        return type === 'balance-entry' ? 'Entradas' :'Saídas'
+    }, [type]);
+
+    const lineColor = useMemo(() => {
+        return type === 'balance-entry' ? "#4E41F0" :'#E44C4E'
+    }, [type]);
+
+
     const months = [
         {value: 12, label: 'Dezembro'},
         {value: 1, label: 'Janeiro'},
@@ -20,7 +39,7 @@ const List: React.FC = () => {
 
     return(
         <S.Container>
-            <ContentHeader title="Saídas" lineColor="#E44C4E">
+            <ContentHeader title={title} lineColor={lineColor}>
                 <SelectInput options={months}/>
                 <SelectInput options={years}/>
             </ContentHeader>
