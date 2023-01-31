@@ -50,15 +50,16 @@ const List: React.FC<IRoutesProps> = ({match}) => {
     }, [type]);
 
     const months = [
-        {value: 2, label: 'Fevereiro'},
         {value: 1, label: 'Janeiro'},
+        {value: 2, label: 'Fevereiro'},
+        {value: 3, label: 'Março'},
+        {value: 4, label: 'Abril'},
         {value: 5, label: 'Maio'},
     ]
     
     const years = [
-        {value: 0, label: 2019},
-        {value: 1, label: 2020},
-        {value: 4, label: 2023},
+        {value: 2020, label: 2020},
+        {value: 2021, label: 2021},
     ]
 
     
