@@ -50,27 +50,12 @@ const List: React.FC<IRoutesProps> = ({match}) => {
        return type === 'balance-entry' ? gains : expenses;
     }, [type]);
 
-<<<<<<< HEAD
-    const months = [
-        {value: 1, label: 'Janeiro'},
-        {value: 2, label: 'Fevereiro'},
-        {value: 3, label: 'Março'},
-        {value: 4, label: 'Abril'},
-        {value: 5, label: 'Maio'},
-    ]
-    
-    const years = [
-        {value: 2020, label: 2020},
-        {value: 2021, label: 2021},
-    ]
-=======
     const years = useMemo(() => {
         let uniqueYears: number[] = []; // variável de temporária
         
         listData.forEach(item => {
             const date = new Date(item.date);
             const year = date.getFullYear();
->>>>>>> develop
 
             if(!uniqueYears.includes(year))
                 uniqueYears.push(year);
