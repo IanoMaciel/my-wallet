@@ -12,7 +12,7 @@ export default {
 
         success: '#4E41F0',
         information: '#F7931B',
-        warning: '#E44C4E '
+        warning: '#E44C4E'
 
     },
 }
