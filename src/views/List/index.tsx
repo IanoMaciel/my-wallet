@@ -1,15 +1,17 @@
 import React, {useMemo, useState, useEffect} from "react";
 import { v4 as uuidv4 } from 'uuid';
+
 import ContentHeader from "../../components/ContentHeader";
 import HistoryFinanceCard from "../../components/HistoryFinanceCard";
 import SelectInput from "../../components/SelectInput";
-import * as S from './styles';
 
 import listOfMonths from "../../utils/months";
 import gains from "../../repositories/gains";
 import expenses from "../../repositories/expenses";
 import formatCurrency from "../../utils/formatCurrency";
 import formatDate from "../../utils/formatDate";
+
+import * as S from './styles';
 
 
 interface IRoutesProps {
@@ -29,10 +31,9 @@ interface IData {
     tagColor: string;
 }
 
-const List: React.FC<IRoutesProps> = ({match}) => {
+const List: React.FC<IRoutesProps> = ({ match }) => {
 
     const [data, setData] = useState<IData[]>([]);
-
     const [monthSelected, setMonthSelected] = useState<string>(String(new Date().getMonth() + 1));
     const [yearSelected, setYearSelected] = useState<string>(String(new Date().getFullYear()));
     const [selectedFrequency, setSelectedFrequency] = useState(['recorrente', 'eventual']);
@@ -51,6 +52,7 @@ const List: React.FC<IRoutesProps> = ({match}) => {
        return type === 'balance-entry' ? gains : expenses;
     }, [type]);
 
+
     const years = useMemo(() => {
         let uniqueYears: number[] = []; // variável de temporária
         
@@ -65,7 +67,7 @@ const List: React.FC<IRoutesProps> = ({match}) => {
         return uniqueYears.map(year => {
             return {
                 value: year,
-                label: year
+                label: year,
             }
         });
     },[listData])
