@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# Nome do Sistema
+**Minha Carteira**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sobre o Repositório
 
-## Available Scripts
+Este repositório apresenta um sistema desenvolvido durante um curso realizado na plataforma de educação Udemy. **Minha Carteira** é um sistema para web que monitora entradas e saídas de dinheiros, além disso, possui um dashboard para melhor visualização dos dados. O objetivo deste, é simular uma carteira onde o usuário consegue visualizar movimentações de ganhos e saídas. 
 
-In the project directory, you can run:
+# Tecnologias e Ferramentas Utilizadas
+- [x] **Linguagem de Programação:** TypeScript e NodeJs (interpretador V8)
+- [x] **Frameworks:** React 
+- [x] **Componentes:** styled-components
+- [x] **Editor de Código:** Visual Studio Code
 
-### `npm start`
+# Layout da Aplicação
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://user-images.githubusercontent.com/71051791/216740508-6e8b5013-eab1-4284-b88e-84aa51eb94b6.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Como Utilizar
 
-### `npm test`
+Para utilizar este projeto é necessário seguir as etapas abaixo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**1. Clonar o repositório:**
 
-### `npm run build`
+    git clone https://github.com/IanoMaciel/my-wallet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**2. Baixar as depedências:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    cd my-wallet //entrar no diretório
+    yarn install //baixar as depedências do projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**3. Executar sistema:**
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    yarn start
