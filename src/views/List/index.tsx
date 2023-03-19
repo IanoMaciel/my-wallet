@@ -1,18 +1,15 @@
-import React, {useMemo, useState, useEffect} from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 import ContentHeader from "../../components/ContentHeader";
 import HistoryFinanceCard from "../../components/HistoryFinanceCard";
 import SelectInput from "../../components/SelectInput";
-
-import listOfMonths from "../../utils/months";
-import gains from "../../repositories/gains";
 import expenses from "../../repositories/expenses";
+import gains from "../../repositories/gains";
 import formatCurrency from "../../utils/formatCurrency";
 import formatDate from "../../utils/formatDate";
-
+import listOfMonths from "../../utils/months";
 import * as S from './styles';
-
 
 interface IRoutesProps {
     match: {
@@ -90,7 +87,7 @@ const List: React.FC<IRoutesProps> = ({ match }) => {
             const filttered = selectedFrequency.filter(item => item != frequency);
             setSelectedFrequency(filttered);
         } else {
-            setSelectedFrequency((prev) => [... prev, frequency])
+            setSelectedFrequency((prev) => [...prev, frequency])
         }
     }
 
@@ -98,7 +95,7 @@ const List: React.FC<IRoutesProps> = ({ match }) => {
         try {
             const parseMonth = Number(month);
             setMonthSelected(parseMonth)
-        } catch(error) {
+        } catch {
             throw new Error('Invalid month value. Is accept  between 0 and 24')
         }
     }
@@ -107,7 +104,7 @@ const List: React.FC<IRoutesProps> = ({ match }) => {
         try {
             const parseYear = Number(year);
             setYearSelected(parseYear)
-        } catch(error) {
+        } catch {
             throw new Error('Invalid yaer value. Only numbers are accepted')
         }
     }
