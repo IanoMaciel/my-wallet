@@ -22,7 +22,7 @@ const PieCharts: React.FC<IPieChartsProps> = ({ data }) => (
                 {
                     data.map(item => (
                         <S.Legend key={item.name} color={item.color}>
-                            <div>{item.percent}</div>
+                            <div>{item.percent}%</div>
                             <span>{item.name}</span>
                         </S.Legend>
                     ))

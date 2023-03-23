@@ -57,6 +57,8 @@ export const Legend = styled.li<ILgendaProps>`
         width: 45px;
         height: 45px;
 
+        padding: 35px;
+
         background-color: ${props => props.color};
 
         border-radius: 7px;
